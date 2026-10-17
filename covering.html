@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#293238">
+  <meta name="description" content="DECOSHIP — Covering de bateau, changement de couleur, créations personnalisées et protection du gelcoat. Découvrez la comparaison avant-après.">
+  <title>Le Covering — DECOSHIP</title>
+  <style>
+    :root{--charcoal:#293238;--deep:#171e22;--light:#3a464d;--silver:#aeb8bf;--orange:#f69a00;--orange2:#ff7400;--paper:#eef1ef;--ink:#27343b;--muted:#59676e}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Avenir Next",Avenir,Montserrat,Arial,sans-serif}
+    a{color:inherit}
+    .site-header{height:132px;position:relative;z-index:10;background:radial-gradient(ellipse at 50% -55%,rgba(255,255,255,.14),transparent 62%),linear-gradient(110deg,#39434a 0%,#283137 42%,#1c2328 100%);border-bottom:1px solid rgba(217,226,231,.62);box-shadow:0 8px 20px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.18)}
+    .nav-shell{height:100%;max-width:1800px;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:minmax(0,1fr) 230px minmax(0,1.28fr);gap:18px;align-items:center}
+    .nav-group{display:flex;align-items:center;justify-content:center;gap:clamp(8px,1.1vw,18px);min-width:0}.nav-group.right{justify-content:flex-end}
+    .logo-slot{width:230px;height:100%;position:relative;display:flex;align-items:flex-start;justify-content:center;z-index:3}
+    .brand-logo{position:absolute;top:0;width:228px;height:auto;max-height:195px;object-fit:contain;filter:drop-shadow(0 5px 7px rgba(0,0,0,.54))}
+    .doming{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:0 clamp(11px,1vw,19px);flex:1 1 auto;min-width:0;text-align:center;text-decoration:none;white-space:nowrap;color:#f3f5f6;font-size:clamp(10px,.8vw,13px);font-weight:650;letter-spacing:.035em;border-radius:16px;border:1px solid rgba(211,225,232,.68);background:linear-gradient(180deg,rgba(223,235,241,.56) 0%,rgba(121,140,151,.42) 13%,rgba(42,54,62,.68) 34%,rgba(10,16,20,.80) 58%,rgba(26,36,43,.70) 82%,rgba(112,129,139,.42) 100%);-webkit-backdrop-filter:blur(7px) saturate(1.25);backdrop-filter:blur(7px) saturate(1.25);box-shadow:inset 0 2px 3px rgba(255,255,255,.72),inset 0 -4px 7px rgba(0,0,0,.70),inset 0 0 0 1px rgba(255,255,255,.09),0 4px 7px rgba(0,0,0,.42),0 1px 0 rgba(255,255,255,.18);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+    .doming:before{content:"";position:absolute;left:10%;right:10%;top:2px;height:2px;border-radius:50%;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.94),rgba(255,255,255,.08));filter:blur(.35px);pointer-events:none}
+    .doming:after{content:"";position:absolute;left:18%;right:18%;bottom:-3px;height:7px;border-radius:50%;background:rgba(238,137,15,.24);filter:blur(5px);opacity:.35;transition:opacity .2s ease;pointer-events:none}
+    .doming:hover,.doming:focus-visible{transform:translateY(-2px);border-color:#d8b68c;box-shadow:inset 0 2px 2px rgba(255,255,255,.76),inset 0 -3px 5px rgba(0,0,0,.88),0 6px 12px rgba(0,0,0,.5),0 0 12px rgba(239,145,37,.19);outline:none}.doming:hover:after{opacity:.9}
+    .doming.active{border-color:rgba(255,179,78,.95);box-shadow:inset 0 2px 3px rgba(255,255,255,.76),inset 0 -4px 7px rgba(0,0,0,.72),0 0 0 1px rgba(246,154,0,.28),0 4px 10px rgba(0,0,0,.42)}
+    .mobile-toggle{display:none}.mobile-menu{display:none}
+    .juxtapose-section{width:100%;margin:0;padding:22px 24px 0;background:#eef1ef;overflow:hidden}
+    .juxtapose-wrap{width:100%;max-width:1000px;margin:0 auto;border:1px solid rgba(44,61,69,.14);border-radius:16px;overflow:hidden;background:#e5eae8;box-shadow:0 12px 28px rgba(20,37,44,.12)}
+    .juxtapose-frame{display:block;width:100%;height:clamp(380px,43vw,590px);border:0;margin:0;background:#eef1ef}
+    .eyebrow{font-size:12px;font-weight:800;letter-spacing:.23em;text-transform:uppercase;color:#ffc15b;margin:0 0 14px}
+    h1{margin:0;font-size:clamp(42px,6vw,78px);line-height:.98;letter-spacing:.03em;font-weight:650;text-shadow:0 3px 14px rgba(0,0,0,.52)}
+    .hero-subtitle{margin:18px 0 0;font-size:clamp(21px,2.4vw,34px);font-weight:350;letter-spacing:.025em;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+    .cta{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-width:280px;min-height:54px;padding:0 25px;margin-top:28px;border-radius:20px;color:#171717;font-weight:800;font-size:14px;letter-spacing:.02em;text-decoration:none;background:linear-gradient(180deg,#ffd66a 0%,#ffad16 23%,#ff8800 73%,#e96700 100%);border:1px solid #ffe2a3;box-shadow:inset 0 2px 2px rgba(255,255,255,.86),inset 0 -3px 3px rgba(151,66,0,.48),0 5px 0 #a84f05,0 11px 22px rgba(255,128,0,.29);transition:transform .18s ease,filter .18s ease}.cta:hover,.cta:focus-visible{transform:translateY(-3px);filter:brightness(1.07);outline:none}.cta .arrow{font-size:24px;line-height:1;font-weight:400}
+    .content{max-width:1260px;margin:0 auto;padding:34px 28px 76px}
+    .content-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
+    .section-kicker{margin:0 0 12px;text-transform:uppercase;letter-spacing:.19em;font-size:12px;font-weight:800;color:#ae650d}
+    h2{font-size:clamp(28px,3vw,43px);line-height:1.12;color:#29363d;margin:0 0 21px;font-weight:650}
+    .body-copy{font-size:17px;line-height:1.8;color:#4e5e65;margin:0 0 18px}
+    .benefits{list-style:none;padding:0;margin:23px 0 25px;display:grid;gap:12px;text-align:left}
+    .benefits li{position:relative;padding:14px 17px 14px 47px;border:1px solid rgba(64,81,89,.15);border-radius:13px;background:linear-gradient(135deg,#fff,#e9eeec);box-shadow:0 5px 14px rgba(22,36,43,.06)}
+    .benefits li:before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#ffc85c,#ef8700);color:#222;font-size:13px;font-weight:900;box-shadow:inset 0 1px 1px rgba(255,255,255,.8),0 2px 3px rgba(0,0,0,.16)}
+    .gallery{display:grid;grid-template-columns:1fr;gap:22px;align-content:start}
+    .gallery figure{margin:0;position:relative;overflow:hidden;border-radius:18px;background:linear-gradient(135deg,#d2dcda,#62777d);min-height:220px;box-shadow:0 14px 30px rgba(15,32,40,.17);border:1px solid rgba(255,255,255,.85)}
+    .gallery figure:first-child{grid-column:auto;min-height:340px}
+    .gallery img{display:block;width:100%;height:100%;min-height:inherit;object-fit:cover;transition:transform .5s ease}
+    .gallery figure:hover img{transform:scale(1.035)}
+    .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 15px;color:white;font-size:13px;letter-spacing:.05em;background:linear-gradient(180deg,transparent,rgba(8,19,24,.82))}
+    .signature{position:relative;overflow:hidden;text-align:center;padding:75px 22px 80px;color:#f7f9fa;background:radial-gradient(ellipse at 50% -20%,rgba(255,255,255,.14),transparent 50%),linear-gradient(125deg,#35434a,#1c2429 65%,#293239)}
+    .signature:before{content:"";position:absolute;left:-5%;right:-5%;top:-42px;height:75px;border-radius:50%;background:var(--paper);box-shadow:0 1px 0 rgba(255,255,255,.45)}
+    .signature h2{position:relative;color:white;margin:0 0 12px;font-size:clamp(28px,3vw,42px)}.signature p{position:relative;color:#d7dfe2;font-size:18px;margin:0}
+    .footer{padding:28px 20px;text-align:center;color:#b7c1c6;background:#151d21;font-size:12px;line-height:1.8}.footer a{color:#ffd090;text-decoration:none}
+    @media(max-width:1120px){.site-header{height:112px}.nav-shell{display:flex;justify-content:space-between;gap:0;padding:0 18px}.nav-group{display:none}.logo-slot{position:absolute;left:50%;transform:translateX(-50%);top:0;width:166px}.brand-logo{width:184px;max-height:162px}.mobile-toggle{display:inline-flex;align-items:center;justify-content:center;width:48px;height:43px;color:#f6f7f7;font-size:23px;cursor:pointer;border:1px solid rgba(211,225,232,.68);border-radius:14px;background:linear-gradient(180deg,rgba(223,235,241,.56),rgba(42,54,62,.75) 36%,rgba(7,12,16,.87) 72%,rgba(112,129,139,.42));backdrop-filter:blur(7px);box-shadow:inset 0 2px 3px rgba(255,255,255,.68),inset 0 -3px 5px rgba(0,0,0,.75),0 4px 7px rgba(0,0,0,.45)}.mobile-menu{display:none;position:absolute;left:18px;right:18px;top:99px;padding:14px;border:1px solid #69747b;border-radius:16px;background:rgba(35,45,51,.94);backdrop-filter:blur(12px);box-shadow:0 12px 28px rgba(0,0,0,.45);grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.mobile-menu.open{display:grid}.doming{padding:0 10px;min-height:43px;font-size:10px;border-radius:14px}}
+    @media(max-width:820px){.juxtapose-section{padding:16px 16px 0}.juxtapose-frame{height:clamp(340px,62vw,500px)}.site-header{height:96px}.logo-slot{width:146px}.brand-logo{width:160px;max-height:140px}.mobile-menu{left:12px;right:12px;top:85px;grid-template-columns:repeat(2,minmax(0,1fr))}.mobile-menu .doming{min-height:46px;font-size:11px}.cover-hero{height:auto;min-height:500px}.hero-inner{padding:72px 24px 82px}.content{padding:34px 22px 62px}.content-grid{grid-template-columns:1fr;gap:34px}.gallery figure:first-child{min-height:270px}.gallery figure{min-height:190px}}
+    @media(max-width:480px){.juxtapose-section{padding:12px 10px 0}.juxtapose-wrap{border-radius:12px}.juxtapose-frame{height:clamp(300px,86vw,430px)}.content{padding-top:28px}.cover-hero{min-height:480px}.hero-inner{padding:64px 20px 76px}.cta{min-width:245px;min-height:52px;font-size:13px}.gallery{gap:10px}.gallery figure:first-child{min-height:220px}.gallery figure{min-height:145px}.body-copy{font-size:16px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+    /* V5 — graphite satin theme: preserve approved layout, original logo and copy. */
+    :root{--charcoal:#252c31;--deep:#171b1e;--light:#343d43;--silver:#d7dde0;--orange:#f28a00;--orange2:#ff7400;--paper:#20262a;--ink:#edf1f3;--muted:#c3cbd0}
+    body{background:#20262a;color:#edf1f3}
+    .site-header{background:radial-gradient(ellipse at 50% -55%,rgba(255,255,255,.13),transparent 62%),linear-gradient(110deg,#343c42 0%,#252c31 42%,#171b1e 100%);border-bottom-color:rgba(215,221,224,.68)}
+    .juxtapose-section{background:#20262a}
+    .juxtapose-wrap{background:#252c31;border-color:rgba(215,221,224,.28);box-shadow:0 14px 32px rgba(0,0,0,.28)}
+    .juxtapose-frame{background:#20262a}
+    .section-kicker{color:#f2a13b}
+    h2{color:#f0f3f4}
+    .body-copy{color:#c3cbd0}
+    .benefits li{color:#e9eef0;background:linear-gradient(135deg,#343d43,#252c31 70%,#20262a);border-color:rgba(215,221,224,.2);box-shadow:0 6px 16px rgba(0,0,0,.18)}
+    .gallery figure{background:linear-gradient(135deg,#343d43,#171b1e);border-color:rgba(215,221,224,.38);box-shadow:0 14px 30px rgba(0,0,0,.3)}
+    .signature{background:radial-gradient(ellipse at 50% -20%,rgba(255,255,255,.12),transparent 50%),linear-gradient(125deg,#343d43,#171b1e 65%,#252c31)}
+    .signature:before{background:#20262a;box-shadow:0 1px 0 rgba(215,221,224,.18)}
+    .footer{background:#111518;color:#b7c1c6;border-top:1px solid rgba(215,221,224,.14)}
+
+  
+    .copy-column{text-align:left;align-self:center}.covering-title{font-size:clamp(42px,5.4vw,76px);line-height:1.02;font-weight:850;letter-spacing:.045em;color:#F28A00;margin:0 0 24px;text-shadow:0 2px 18px rgba(242,138,0,.12)}
+    .content{background:#20262a;color:#eef1f3}
+    .copy-column .body-copy{color:#d0d7db}
+    .gallery figcaption{display:none;color:#fff}
+    .copy-column .cta{display:flex;width:max-content;max-width:100%;margin:28px auto 0}.brand-partners{width:100%;max-width:300px;margin:52px auto 0;display:flex;align-items:center;justify-content:center;padding:0}
+    .brand-partners img{display:block;width:100%;height:auto;max-height:250px;object-fit:contain}
+    @media(max-width:820px){.copy-column .cta{margin-left:auto;margin-right:auto}.brand-partners{max-width:280px;margin-top:44px}.brand-partners img{max-height:220px}}
+    .gallery figure{height:clamp(320px,32vw,500px);min-height:320px}
+    .gallery figure:first-child{height:clamp(320px,32vw,500px);min-height:320px}
+    @media(max-width:820px){.content-grid{grid-template-columns:1fr;gap:30px}.copy-column{text-align:left}.gallery{grid-template-columns:1fr}.gallery figure:first-child,.gallery figure{height:clamp(280px,60vw,420px);min-height:280px}}
+    @media(max-width:480px){.covering-title{font-size:44px}.gallery{grid-template-columns:1fr}.gallery figure:first-child,.gallery figure{height:280px;min-height:280px}}
+  .language-switch{font-size:22px!important;line-height:1;letter-spacing:0;min-width:42px;text-align:center;color:#f3f5f6!important;border-color:rgba(242,138,0,.65)!important}
+</style>
+<style>
+    /* Visionneuse commune : cliquer sur une image pour l'agrandir */
+    img.zoomable-image{cursor:zoom-in;transition:filter .18s ease,transform .18s ease}
+    img.zoomable-image:hover{filter:brightness(1.04)}
+    .image-lightbox{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:4vh 4vw;background:rgba(8,11,13,.92);backdrop-filter:blur(5px)}
+    .image-lightbox.open{display:flex}
+    .image-lightbox img{display:block;max-width:92vw;max-height:90vh;width:auto;height:auto;object-fit:contain;box-shadow:0 18px 70px rgba(0,0,0,.55);border:1px solid rgba(215,221,224,.35);border-radius:8px;cursor:zoom-out}
+    .image-lightbox-close{position:absolute;top:18px;right:24px;width:46px;height:46px;border:1px solid rgba(255,255,255,.65);border-radius:50%;background:rgba(25,30,34,.8);color:#fff;font-size:30px;line-height:1;cursor:pointer}
+    .image-lightbox-hint{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#e7eaec;font:14px/1.4 system-ui,sans-serif}
+    @media(prefers-reduced-motion:reduce){img.zoomable-image{transition:none}}
+  .language-switch{font-size:22px!important;line-height:1;letter-spacing:0;min-width:42px;text-align:center;color:#f3f5f6!important;border-color:rgba(242,138,0,.65)!important}
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <nav class="nav-group left" aria-label="Navigation principale">
+        <a class="doming" href="index.html">ACCUEIL</a>
+        <a class="doming active" href="covering.html" aria-current="page">COVERING</a>
+        <a class="doming" href="refit.html">REFIT</a>
+      </nav>
+      <a class="logo-slot" href="index.html#accueil" aria-label="DECOSHIP — accueil"><img class="brand-logo" src="assets/logo-decoship.png" alt="DECOSHIP — De la création à la pose"></a>
+      <nav class="nav-group right" aria-label="Autres rubriques">
+        <a class="doming language-switch" href="covering-en.html" lang="en" aria-label="English version">🇬🇧</a>
+        <a class="doming" href="lettrage.html">LETTRAGE</a>
+        <a class="doming" href="bandes.html">BANDES ADHÉSIVES</a>
+        <a class="doming" href="index.html#realisations">NOS RÉALISATIONS</a>
+        <a class="doming" href="contact.html">CONTACT</a>
+      </nav>
+      <button class="mobile-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <nav class="mobile-menu" aria-label="Menu mobile">
+        <a class="doming" href="index.html">ACCUEIL</a><a class="doming active" href="covering.html" aria-current="page">COVERING</a><a class="doming" href="refit.html">REFIT</a><a class="doming" href="lettrage.html">LETTRAGE</a><a class="doming" href="bandes.html">BANDES ADHÉSIVES</a><a class="doming" href="index.html#realisations">NOS RÉALISATIONS</a><a class="doming" href="contact.html">CONTACT</a>
+      <a class="doming language-switch" href="covering-en.html" lang="en">🇬🇧</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="juxtapose-section" aria-label="Comparaison avant-après d’une réalisation de covering">
+      <div class="juxtapose-wrap">
+        <iframe class="juxtapose-frame" frameborder="0" title="Comparaison avant-après — covering DECOSHIP" loading="eager" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c50496e8-6c16-11f1-ba1b-0e6f42328d7d" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="content" aria-labelledby="covering-copy-title">
+      <div class="content-grid">
+        <div class="copy-column">
+          <h2 id="covering-copy-title" class="covering-title">COVERING</h2>
+          <p class="body-copy">Le vinyle conformable est assez souple pour s’adapter aux surfaces irrégulières d’un bateau, et assez résistant pour durer des années malgré les conditions extérieures. Ce traitement est entièrement réversible, et permet de protéger votre peinture originale.</p>
+          <p class="body-copy">Le covering est la solution parfaite dans les cas suivants :</p>
+          <ul class="benefits">
+            <li>Changer la couleur de votre bateau sans refaire la peinture</li>
+            <li>Créations personnalisées, logos, motifs</li>
+            <li>Protection du gelcoat et de la peinture d’origine</li>
+          </ul>
+          <p class="body-copy">Les vinyles adhésifs ont la même durée de vie qu’une peinture, et assurent la protection de votre coque pendant de longues années.</p>
+          <p class="body-copy">Cette alternative permet de réduire le coût des travaux et la durée d’immobilisation de votre bateau.</p>
+          <a class="cta" href="contact.html"><span>PARLONS DE VOTRE PROJET</span><span class="arrow" aria-hidden="true">⟶</span></a>
+          <div class="brand-partners"><img src="assets/logos-marques.png" alt="Marques de films adhésifs : MacTac, 3M, APA, Oracal, Avery Dennison et Arlon" loading="lazy"></div>
+        </div>
+        <div class="gallery" aria-label="Galerie de réalisations de covering">
+          <figure><img src="assets/covering-realisation-1.png" alt="Exemple de réalisation DECOSHIP en covering" loading="lazy"></figure>
+          <figure><img src="assets/covering-realisation-2.png" alt="Réalisations de covering et décoration adhésive" loading="lazy"></figure>
+          <figure><img src="assets/covering-realisation-3.png" alt="Détail d’une réalisation de covering DECOSHIP" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+    <section class="signature"><h2>Votre bateau est unique,</h2><p>Donnez libre cours à votre ou notre imagination</p><a class="cta" href="contact.html"><span>DEMANDER UN DEVIS</span><span class="arrow" aria-hidden="true">⟶</span></a></section>
+  </main>
+  <footer class="footer">DECOSHIP · 1, rue Jean Mermoz, 66140 Canet-en-Roussillon · <a href="tel:+33781944899">07 81 94 48 99</a> · <a href="tel:+33658108457">06 58 10 84 57</a> · <a href="mailto:decoship.vm@gmail.com">decoship.vm@gmail.com</a></footer>
+  <script>
+    const toggle=document.querySelector('.mobile-toggle');const mobileMenu=document.querySelector('.mobile-menu');
+    toggle.addEventListener('click',()=>{const opened=mobileMenu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(opened));toggle.setAttribute('aria-label',opened?'Fermer le menu':'Ouvrir le menu');toggle.textContent=opened?'×':'☰'});
+    mobileMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{mobileMenu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));
+  </script>
+
+  <div class="image-lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
+    <button class="image-lightbox-close" type="button" aria-label="Fermer l’image agrandie">×</button>
+    <img alt="" src="">
+    <div class="image-lightbox-hint">Cliquer sur l’image ou sur × pour fermer · Échap pour fermer</div>
+  </div>
+  <script>
+    (() => {
+      const box = document.getElementById('image-lightbox');
+      const enlarged = box.querySelector('img');
+      const closeButton = box.querySelector('.image-lightbox-close');
+      let previousFocus = null;
+      document.querySelectorAll('main img, .brand-partners img').forEach(img => {
+        if (img.classList.contains('brand-logo')) return;
+        img.classList.add('zoomable-image');
+        img.tabIndex = 0;
+        img.setAttribute('role','button');
+        img.setAttribute('aria-label',(img.alt || 'Image') + ' — cliquer pour agrandir');
+        const open = () => { previousFocus = img; enlarged.src = img.currentSrc || img.src; enlarged.alt = img.alt || 'Image agrandie'; box.classList.add('open'); document.body.style.overflow='hidden'; closeButton.focus(); };
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(); } });
+      });
+      const close = () => { box.classList.remove('open'); enlarged.src=''; document.body.style.overflow=''; if(previousFocus) previousFocus.focus(); };
+      closeButton.addEventListener('click', close);
+      enlarged.addEventListener('click', close);
+      box.addEventListener('click', e => { if(e.target === box) close(); });
+      document.addEventListener('keydown', e => { if(e.key === 'Escape' && box.classList.contains('open')) close(); });
+    })();
+  </script>
+
+</body>
+</html>

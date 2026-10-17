@@ -1,0 +1,4 @@
+DECOSHIP V5.20 — version bilingue FR/EN.
+Ouvrir index.html dans Safari. Le sélecteur EN/FR se trouve dans le menu.
+Les pages françaises restent disponibles ; les pages anglaises sont les fichiers -en.html.
+Site de travail local : non publié.
