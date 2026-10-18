@@ -222,25 +222,7 @@
       </div>
     </section>
   </main>
-  <script>
-    // Démarrage automatique de la vidéo d'accueil (lecture muette pour autoriser l'autoplay dans Safari/Chrome).
-    (() => {
-      const video = document.querySelector('.hero-video');
-      if (!video) return;
-      video.muted = true;
-      video.defaultMuted = true;
-      video.playsInline = true;
-      const startVideo = () => {
-        if (document.visibilityState === 'hidden') return;
-        const result = video.play();
-        if (result && typeof result.catch === 'function') result.catch(() => {});
-      };
-      video.addEventListener('loadedmetadata', startVideo, { once: true });
-      video.addEventListener('canplay', startVideo, { once: true });
-      document.addEventListener('visibilitychange', startVideo);
-      window.addEventListener('pageshow', startVideo);
-      startVideo();
-    })();
+  
     const toggle = document.querySelector('.mobile-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
     toggle.addEventListener('click', () => {
@@ -283,5 +265,33 @@
     })();
   </script>
 
+  <script>
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.play().catch(() => {});
+}
+</script>
+
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.querySelector('.hero-video');
+  if (!video) return;
+
+  video.muted = true;
+  video.defaultMuted = true;
+  video.setAttribute('muted', '');
+  video.playsInline = true;
+
+  const lancerVideo = () => {
+    const resultat = video.play();
+    if (resultat) resultat.catch(() => {});
+  };
+
+  video.addEventListener('loadeddata', lancerVideo);
+  video.addEventListener('canplay', lancerVideo);
+  lancerVideo();
+});
+</script>
 </html>
